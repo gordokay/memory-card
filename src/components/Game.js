@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Board from "./Board";
 
 const colors = ["violet", "rose", "turquoise", "periwinkle", "orange", "yellow", "lavender", "pink"];
 
@@ -13,3 +14,5 @@ const Game = () => {
   }
   return <Board cards={cards} handleClick={handleClick} />
 }
+
+export default Game;
