@@ -2,8 +2,9 @@ import React from "react";
 
 const Card = (props) => {
   const { handleClick, color } = props;
+  const style = { backgroundColor: color};
   return (
-    <div onClick={ handleClick } id={ color } className="card"/>
+    <div onClick={ handleClick } style={ style } className="card"/>
   )
 }
 
