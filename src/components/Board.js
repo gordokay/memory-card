@@ -4,7 +4,7 @@ import Card from './Card';
 const Board = (props) => {
   const { cards, handleClick } = props;
   return (
-    cards.map(card => <Card key={ card.id } color={ card.color } handleClick={ handleClick } />)
+    cards.map(card => <Card key={ card.color } color={ card.color } handleClick={ handleClick } />)
   )
 }
 
