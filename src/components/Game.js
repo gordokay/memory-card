@@ -7,9 +7,9 @@ const Game = () => {
   const [ cards, setCards ] = useState(colors.map(color => ({ color, isClicked: false })));
   const handleClick = (e) => {
     const cardsCopy = cards.slice();
-    const targetCard = cardsCopy.find(card => card.color === e.target.id);
-    if(targetCard.isClicked) return;
-    targetCard = {...targetCard, isClicked: true};
+    let targetIndex = cardsCopy.findIndex(card => card.color === e.target.id);
+    if(cardsCopy[targetIndex].isClicked) return;
+    cardsCopy[targetIndex] = {...cardsCopy[targetIndex], isClicked: true};
     setCards(cardsCopy);
   }
   return <Board cards={cards} handleClick={handleClick} />
