@@ -27,7 +27,7 @@ const Game = () => {
     setCards(shuffleCards(cardsCopy));
   }
   return (
-    <>
+    <div className="container">
       <section className="info">
         <Header />
         <Scoreboard scores={ scores } />
@@ -35,7 +35,7 @@ const Game = () => {
       <section className="board">
         <Board cards={ cards } handleClick={ handleClick } />
       </section>
-    </>
+    </div>
   )
 }
 
