@@ -1,4 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #FEFCFB;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
 .card {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
+  transition: transform 100ms ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform-origin: center;
+  transform: scale(105%);
 }
